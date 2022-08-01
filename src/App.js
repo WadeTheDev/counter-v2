@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Counter from './components/Counter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>{
+  let stateNumber = useState(1)
+  let number = stateNumber[0]
+  let setNumber = stateNumber[1]
+const addition = () => {
+  setNumber(number + 1) 
 }
-
+const soustraction = () => {
+  setNumber(number - 1) 
+}
+  return (
+    <>
+    <Counter number={number} addition={addition} soustraction={soustraction}/>
+    </>
+  )
+}
 export default App;

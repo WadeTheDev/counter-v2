@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.count{
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.count button{
+background: white;
+font-size: 26px;
+ width: 70px;
+ height: 70px;
+ border-radius: 200px;
+}
